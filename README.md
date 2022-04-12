@@ -1,1 +1,1 @@
-# acute-sc.github.io
+# [www.vegean.jp](https://www.vegean.jp/) repository

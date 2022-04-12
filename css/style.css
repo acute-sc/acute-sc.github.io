@@ -169,14 +169,19 @@ h2 {
     left:0;
     width: 100%;
     z-index: 100;
-    font-size: 25px;
+    font-size: 28px;
     color: #ffffff;
     font-family:"Kiwi Maru",serif;
-    boeder: none;
+    border: none;
     text-align: center;
     line-height: 250%;
     height: 1300px;
 }
+.lecture p{
+    width: 800px;
+    margin: 0 auto;
+}
+
 .lecture h2{
     padding: 210px 0 0;
     font-size: 50px;
@@ -191,15 +196,18 @@ h2 {
     background:linear-gradient(transparent 60%, #A8BE20 60%);
 }
 .lecture-01{
-    font-size: 15px;
+    font-size: 14px;
     color: #6A4504;
     font-family:"Kiwi Maru",serif;
-    boeder: none;
-    text-align: left;
+    border: none;
+    text-align: center;
     line-height: 100%;
-    margin: 11vw auto;
-    width: 800px;
+    margin: 2vw auto;
 }
+.lecture-01 p{
+    width: 600px;
+    }
+
 .support{
     background-image: url("../img/support.png");
     background-repeat: no-repeat;
@@ -213,7 +221,7 @@ h2 {
     line-height: 1.5;
     color: #6A4504;
     font-family:"Kiwi Maru",serif;
-    boeder: none;
+    border: none;
     text-align: left;
     position: relative;
 }
@@ -226,7 +234,7 @@ h2 {
     font-size: 40px;
     line-height: 1;
     color: #6A4504;
-    boeder: none;
+    border: none;
 }
 .support h2 span{
     background:linear-gradient(transparent 60%, #A8BE20 60%);
@@ -366,7 +374,7 @@ h2 {
     float:right;
     height: 65px;
 }
-    
+
 .mainContents{
     background-image: url("../img/top.png");
     width: 100%;
@@ -382,11 +390,14 @@ h2 {
 .lecture{
     background-image: url("../img/lecture.png");
     width: 100%;
-    font-size: 15px;
-    line-height: 1.6;
+    font-size: 15.5px;
+    line-height: 1.7;
     height: 600px;
     margin: -18vw 0 0;
 }
+.lecture p{
+    width: 380px;
+    }
 .lecture h2{
     padding: 10vw 0 0;
     font-size: 20px;
@@ -402,11 +413,11 @@ h2 {
 }
 .lecture-01{
     font-size: 4px;
-    margin: 16vw auto;
-    text-align: left;
-    line-height: 1;
-    width: 450px;
+    margin: 3vw auto;
 }
+.lecture-01 p{
+    width: 300px;
+    }
 .support{
     background-image: url("../img/support.png");
     width: 100%;
@@ -415,7 +426,7 @@ h2 {
     font-size: 18px;
     line-height: 1.5;
     margin: 0 auto;
-    boeder: none;
+    border: none;
     text-align: left;
     position: relative;
 }
@@ -423,12 +434,12 @@ h2 {
     font-size: 25px;
     line-height: 1;
     color: #6A4504;
-    boeder: none;
+    border: none;
 }
 .support h2 span{
     background:linear-gradient(transparent 60%, #A8BE20 60%);
 }
-    
+
 .left{
     position: absolute;
     margin: 21vw 0 0 42vw;
@@ -536,7 +547,7 @@ h2 {
     font-size: 12px;
 }
 
-    
+
 #nav_01{
 	position: fixed;
 	top: 0;
@@ -626,7 +637,7 @@ h2 {
 	-ms-filter:brightness(70%);
 	filter:brightness(70%);
 }
-    
+
 .global-nav li {
     margin: 10px 0;
     font-size: 18px;
@@ -644,7 +655,7 @@ h2 {
     width: 100%;
     height: 700px;
 }
-    
+
 #function footer,
 #case footer,
 #support footer,
@@ -704,12 +715,14 @@ h2 {
 .lecture{
     background-image: url("../img/lecture.png");
     width: 100%;
-    font-size: 14px;
-    line-height: 160%;
+    font-size: 15px;
+    line-height: 140%;
     height: 500px;
-    letter-spacing: -0.13em;
     margin: -18vw 0 0;
 }
+.lecture p{
+    width: 340px;
+    }
 .lecture h2{
     padding: 22vw 0 0;
     font-size: 20px;
@@ -725,11 +738,11 @@ h2 {
 }
 .lecture-01{
     font-size: 3px;
-    margin: 15vw auto;
-    text-align: left;
-    letter-spacing: -0.2em;
-    width: 350px;
+    margin: 3vw auto;
 }
+.lecture-01 p{
+    width: 250px;
+    }
 .support{
     background-image: url("../img/support_s.png");
     width: 100%;
@@ -750,7 +763,7 @@ h2 {
     background:linear-gradient(transparent 60%, #A8BE20 60%);
     font-size: 22px;
     }
-    
+
 .left {
     position: absolute;
     margin: 65vw 0 0 9vw;
@@ -858,7 +871,7 @@ h2 {
     font-size: 12px;
 }
 
-    
+
 #nav_01{
 	position: fixed;
 	top: 0;
@@ -948,7 +961,7 @@ h2 {
 	-ms-filter:brightness(70%);
 	filter:brightness(70%);
 }
-    
+
 .global-nav li {
     margin: 10px 0;
     font-size: 18px;
@@ -957,7 +970,7 @@ h2 {
     border-right: none;
     padding: 0 10px;
 }
-    
+
 #function .mainContents,
 #case .mainContents,
 #support .mainContents,
@@ -977,7 +990,7 @@ h2 {
     text-shadow: 1px 2px 5px #000000;
     background-color: #A8BE20;
 }
-    
+
 #function footer,
 #case footer,
 #support footer,
