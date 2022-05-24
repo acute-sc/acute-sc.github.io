@@ -6,6 +6,10 @@
 *.dylib
 *.out
 
+# Windows batch files
+*.bat
+*.cmd
+
 # Other directories and file
 .env
 *.bak
