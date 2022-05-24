@@ -15,7 +15,7 @@ indent_size = 4
 [*.{go,java}]
 trim_trailing_whitespace = true
 
-[*.{html,css,js,xml,yml,toml,sql}]
+[*.{html,css,js}]
 indent_style = space
-indent_size = 2
+indent_size = 4
 trim_trailing_whitespace = true

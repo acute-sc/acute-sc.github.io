@@ -2,19 +2,19 @@
 
 
 body {
-	margin: 0;
-	padding: 0;
+    margin: 0;
+    padding: 0;
 
-	line-height: 2;
+    line-height: 2;
 }
 p,h1,h2,h3,h4,h5,h6,td{
-		margin-top: 0;
+        margin-top: 0;
         font-family:"Kiwi Maru",serif;
-	}
+    }
 
 ul{
-	margin: 0;
-	padding: 0;
+    margin: 0;
+    padding: 0;
 }
 a{
     color:#6A4504;
@@ -430,7 +430,7 @@ h2 {
 
 .main{
     height: 450px;
-	outline: 1px solid #fff;
+    outline: 1px solid #fff;
     outline-offset: -10px;
     width: 100%;
     background-repeat: no-repeat;
@@ -575,7 +575,7 @@ h2 {
 .p_01{
     margin: 60px auto;
     background-color: #E68024;
-	outline: 1px solid #fff;
+    outline: 1px solid #fff;
     outline-offset: -3px;
     width: 700px;
     height: 100px;
@@ -587,7 +587,7 @@ h2 {
 .p_02{
     margin: 60px auto;
     background-color: #A8BE20;
-	outline: 1px solid #fff;
+    outline: 1px solid #fff;
     outline-offset: -3px;
     width: 700px;
     height: 100px;
@@ -614,12 +614,12 @@ opacity: 0;
   from {
     opacity: 0;
     }
-    
+
   to {
     opacity: 1;
   }
 }
-    
+
 
 
 @media screen and (max-width:1280px){
@@ -639,7 +639,7 @@ opacity: 0;
     float:right;
     height: 65px;
 }
-    
+
 /*   02ここから   */
 .logo02{
     width: 100%;
@@ -672,7 +672,7 @@ opacity: 0;
 
 }
 /*   02ここまで   */
-    
+
 #index .topContents{
     background-image: url("../img/top_02.png");
     width:  100%;
@@ -849,78 +849,78 @@ opacity: 0;
 }
 
 #nav_01{
-	position: fixed;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-	pointer-events: none;
-	z-index: 1200;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 1200;
     line-height: 0;
     text-align: center;
 }
 
 #nav_01 div{
-	width: 80px;
-	height: 80px;
+    width: 80px;
+    height: 80px;
     margin: 10px 0;
-	background: #E0DAD4;
-	overflow: hidden;
-	position: absolute;
+    background: #E0DAD4;
+    overflow: hidden;
+    position: absolute;
     border-radius: 5px;
-	right: 0;
+    right: 0;
 }
 
 #nav_01 .menuopen{
-	color: rgba(255,255,255,1);
-	font-size: 20px;
-	display: block;
-	width: 100%;
-	height: 100%;
-	position: absolute;
-	top: 0;
-	left: 0;
-	pointer-events: auto;
+    color: rgba(255,255,255,1);
+    font-size: 20px;
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    pointer-events: auto;
     padding: 10px 0;
 }
 
 #nav_01 .menuclose{
-	color: rgba(255,255,255,1);
-	font-size: 20px;
-	display: none;
-	width: 100%;
-	height: 100%;
-	position: absolute;
-	top: 0;
-	left: 0;
-	pointer-events: auto;
+    color: rgba(255,255,255,1);
+    font-size: 20px;
+    display: none;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    pointer-events: auto;
     padding: 10px 0;
 }
 
 #nav_01 ul{
-	background: #E0DAD4;
+    background: #E0DAD4;
     height: 430px;
-	width: 100%;
-	position: absolute;
-	top: 90px;
-	right: 0;
-	display: none;
+    width: 100%;
+    position: absolute;
+    top: 90px;
+    right: 0;
+    display: none;
     opacity: 90%;
 }
 
 #nav_01 li{
-	padding: 20px;
-	color: rgba(0,0,0,1);
-	border-bottom: 1px #6A4504 solid;
-	pointer-events: auto;
+    padding: 20px;
+    color: rgba(0,0,0,1);
+    border-bottom: 1px #6A4504 solid;
+    pointer-events: auto;
 }
 
 #nav_01:target .menuopen{
-	display: none;
+    display: none;
 }
 
 #nav_01:target .menuclose{
-	display: block;
+    display: block;
 }
 
 #nav_01:target ul{
@@ -929,16 +929,16 @@ opacity: 0;
 }
 
 #main{
-	background: #fff;
-	-webkit-transition: all 0.3s ease 0s;
-	transition: all 0.3s ease 0s;
+    background: #fff;
+    -webkit-transition: all 0.3s ease 0s;
+    transition: all 0.3s ease 0s;
 }
 
 #nav_01:target ~ #main{
-	-webkit-filter:brightness(70%);
-	-moz-filter:brightness(70%);
-	-ms-filter:brightness(70%);
-	filter:brightness(70%);
+    -webkit-filter:brightness(70%);
+    -moz-filter:brightness(70%);
+    -ms-filter:brightness(70%);
+    filter:brightness(70%);
 }
 
 .global-nav{
@@ -965,7 +965,7 @@ opacity: 0;
 .footer-nav li {
     margin: 20px;
 }
-    
+
 #function .topContents{
     background-image: url("../img/functiontop.jpg");
 }
@@ -983,7 +983,7 @@ opacity: 0;
     width: 100%;
     height: 1000px;
 }
-    
+
 #function footer,
 #case footer,
 #support footer,
@@ -1027,7 +1027,7 @@ opacity: 0;
 
 
 @media screen and (max-width:912px){
-    
+
 #index .topContents{
     background-image: url("../img/top_02.png");
     width: 100%;
@@ -1103,7 +1103,7 @@ opacity: 0;
 .kaiji_02 img{
     max-width: 100px;
     padding: 1em;
-    margin: auto 
+    margin: auto
 }
 .kaiji_02 table{
     margin: 4em 1em;
@@ -1140,12 +1140,12 @@ opacity: 0;
     width: 75%;
 }
 #nav_01 div{
-	width: 60px;
-	height: 60px;
+    width: 60px;
+    height: 60px;
     margin: 0;
 }
 #nav_01 ul{
-	top: 60px;
+    top: 60px;
 }
 }
 
@@ -1385,12 +1385,12 @@ h2 {
     width: 65%;
 }
 #nav_01 div{
-	width: 50px;
-	height: 50px;
+    width: 50px;
+    height: 50px;
     margin: 0;
 }
 #nav_01 ul{
-	top: 50px;
+    top: 50px;
 }
 .global-nav li,
 .global-nav02 li {
