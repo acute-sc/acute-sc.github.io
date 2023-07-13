@@ -1,0 +1,1745 @@
+@charset"utf-8";
+
+
+body {
+  margin: 0;
+  padding: 0;
+  line-height: 2;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+td,
+a{
+  margin-top: 0;
+  font-family: "Kiwi Maru", serif;
+  list-style:none;
+}
+
+p{
+  font-size: 28px;
+  color: #6A4504;
+}
+a,
+.security a{
+  font-size: 14px;
+  color: #6A4504; 
+  text-decoration: none;
+}
+a:visited {
+  color:#87672D;
+}
+a:hover{
+  color: #E68024;
+  text-decoration: none;
+}
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  max-width: 1300px;
+  height: 100px;
+  margin: 0 auto;
+}
+
+.logo {
+  float: left;
+}
+
+.link{
+  width: 1190px;
+  margin: 120px auto 0;
+  display: flex;
+  justify-content: space-between;
+}
+.otameshi img,
+.torikumou img{
+  height: 260px;
+  margin: 0;
+}
+/*・・・ボタン用・・・*/
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: inherit;
+  box-sizing: inherit;
+}
+
+html {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+.btn,
+a.btn,
+button.btn {
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 2.2;
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  text-align: center;
+  vertical-align: middle;
+  text-decoration: none;
+  letter-spacing: 0.1em;
+  color: #212529;
+  border-radius: 0.5rem;
+  top:-160px;
+}
+
+a.btn-border-shadow {
+  padding: calc(1.5rem - 12px) 3rem 1.5rem;
+
+  background: #fff;
+}
+
+a.btn-border-shadow:before {
+  position: absolute;
+  top: -6px;
+  left: -6px;
+
+  width: 100%;
+  height: 100%;
+
+  content: "";
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+
+  border: 2px solid #000;
+  border-radius: 0.5rem;
+}
+
+a.btn-border-shadow:hover {
+  padding: calc(1.5rem - 6px) 3rem;
+}
+
+a.btn-border-shadow:hover:before {
+  top: 0;
+  left: 0;
+}
+
+a.btn-border-shadow--color2,
+a.btn-border-shadow--color3 {
+  border-radius: 100vh;
+}
+
+a.btn-border-shadow--color2:before {
+  border-radius: 100vh;
+  -webkit-box-shadow: 3px 3px 0 #E68024;
+  box-shadow: 3px 3px 0 #E68024;
+}
+a.btn-border-shadow--color3:before {
+  border-radius: 100vh;
+  -webkit-box-shadow: 3px 3px 0 #2558A7;
+  box-shadow: 3px 3px 0 #2558A7;
+}
+/*・・・ボタン用ここまで・・・*/
+
+/*・・・navi style・・・*/
+
+nav{
+    height: 60px;
+    background-color: #FEEBBE;
+}
+.gnavi,
+.gnavi-02{
+    display: flex;
+    list-style: none;
+    height: 80px;
+    position: relative;
+    justify-content: center;
+}
+
+.gnavi li a{
+    display: block;
+    padding:15px 17px;
+    text-decoration: none;
+    color: #6A4504;
+    font-size: 16px;
+    font-family: "Kiwi Maru", serif;
+	position: relative;
+}
+.gnavi-02 li a{
+    display: block;
+    padding:26px 20px;
+    text-decoration: none;
+    color: #6A4504;
+    font-size: 16px;
+    font-family: "Kiwi Maru", serif;
+	position: relative;
+}
+.gnavi li,
+.gnavi-02 li{
+    margin-bottom:20px;
+}
+.gnavi li.current a,
+.gnavi li a:hover,
+.gnavi-02 li.current a,
+.gnavi-02 li a:hover{
+	color:#E68024;
+}
+
+.gnavi li a::after,
+.gnavi-02 li a::after{
+    content: '';
+    position: absolute;
+    bottom: 9px;
+    left: 10%;
+    width: 80%;
+    height: 2px;
+    background:#E68024;
+    transition: all .3s;
+    transform: scale(0, 1);/*X方向0、Y方向1*/
+    transform-origin: center top;/*上部中央基点*/
+}
+
+.gnavi li.current a::after,
+.gnavi li a:hover::after,
+.gnavi-02 li.current a::after,
+.gnavi-02 li a:hover::after {
+    transform: scale(1, 1);
+}
+
+/*・・・navi style　ここまで・・・*/
+
+.wrapper {
+  min-height: 1800px;
+}
+
+footer {
+  height: 150px;
+}
+
+.footer-nav {
+  justify-content: center;
+  font-size: 18px;
+  font-family: "Kiwi Maru", serif;
+  z-index: 10;
+  display: flex;
+  line-height: 0;
+}
+
+.footer-nav li {
+  margin: 20px;
+}
+
+.footer-nav ul li {
+  line-height: 1.5;
+  padding: 0.5em 0;
+  list-style-type: none !important;
+  color: #ffffff;
+  margin: 10px 0;
+}
+
+.security {
+  margin: 20px auto;
+  text-align: center;
+}
+
+.copySns {
+  text-align: center;
+  margin: 0 auto;
+  color: #6A4504;
+  padding: 10px 0;
+  background-color: #fff;
+  bottom: 0;
+  z-index: 100;
+}
+
+.copySns small {
+  font-size: 12px;
+}
+
+h2 {
+  font-size: 30px;
+  color: #6A4504;
+}
+
+.logo p {
+  font-size: 30px;
+  font-family: "Kiwi Maru", serif;
+  color: #ffffff;
+  line-height: 33px;
+  padding: 10px;
+  text-align: center;
+  text-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
+  float: left;
+}
+
+.logo {
+  height: 60px;
+  background: linear-gradient(transparent 60%, #E68024 60%);
+}
+
+.logo img {
+  float: right;
+}
+
+#index footer {
+  width: 960px;
+  margin: 0 auto;
+  background-color: transparent;
+}
+
+#index .topContents {
+  background-image: url("../img/top.png");
+  width: 100%;
+  height: 1080px;
+}
+h4{
+  width: 1080px;
+  text-align: right;
+  margin: 0 auto;
+  color: #6A4504;
+  font-weight: 100;
+}
+.topContents {
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  top: 0;
+  left: 0;
+  line-height: 0;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.topContents h1 {
+  font-size: 80px;
+  line-height: 2.8;
+  color: #ffffff;
+  font-family: "Kiwi Maru", serif;
+  margin-top: 1.3em;
+  text-shadow: 1px 2px 5px #333333
+}
+.practice{
+  width: 100%;
+  height: 1500px;
+  background-image: url("../img/sdgs_l.png");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  padding: 100px 0;
+}
+
+.practice h2 span{
+  font-size: 35px;
+  background: linear-gradient(transparent 60%, #E479AC 60%);
+}
+
+.feature h2 span{
+  font-size: 38px;
+  background: linear-gradient(transparent 60%, #66CC94 60%);
+}
+.screen img{
+    width: 1000px;
+}
+.screen-02 img{
+    width: 550px;
+}
+.screen-03 img{
+    width: 900px;
+}
+.feature,
+.traceability,
+.medium,
+.homepage,
+.tunagaru,
+.gaiyou-03,
+.gaiyou-04,
+.gaiyou-05,
+.gaiyou-06,
+.gaiyou-07,
+.gaiyou-08{
+  width: 100%;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  text-align: center;
+}
+.feature img,
+.medium img,
+.gaiyou-01 img,
+.gaiyou-02 img,
+.gaiyou-03 img,
+.gaiyou-04 img,
+.gaiyou-05 img,
+.gaiyou-06 img,
+.gaiyou-07 img,
+.gaiyou-08 img{
+  margin: 60px 0;
+}
+.feature{
+  height: 3300px;
+  background-image: url("../img/feature.png");
+}
+.medium{
+  height: 2400px;
+  background-image: url("../img/medium_bk.png");
+  padding: 100px 0;
+}
+.medium-2 img{
+  width: 430px;
+  margin: 0;
+}
+.traceability{
+  height: 1100px;
+  background-image: url("../img/traceability.png");
+}
+.homepage{
+  height: 4800px;
+  background-image: url("../img/hp_bk.png");
+}
+.tunagaru{
+  height: 1800px;
+  background-image: url("../img/tunagaru.png");
+}
+.toumei{
+  background-color: rgba(255, 255, 255, 0.562);
+  height: 100%;
+}
+#function_contents img{
+  width: 900px;
+}
+.gaiyou-01{
+  width: 100%;
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-size: contain;
+  text-align: center;
+  background-image: url("../img/wave-haikei02.png");
+}
+.gaiyou-02{
+  width: 100%;
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  background-size: cover;
+  text-align: center;
+  background-image: url("../img/wave-haikei.png");
+}
+.gaiyou-03{
+    background-image: url("../img/stacked-steps-haikei.png");
+}
+.gaiyou-04{
+    background-image: url("../img/blob-scatter-haikei.png");
+}
+.gaiyou-05{
+    background-image: url("../img/blob-scene-haikei.png");
+}
+.gaiyou-06{
+    background-image: url("../img/layered-waves-haikei.png");
+}
+.gaiyou-07{
+    background-image: url("../img/circle-scatter-haikei.png");
+}
+.gaiyou-08{
+    background-image: url("../img/blob-scene-haikei02.png");
+    height: 1000px;
+}
+.gaiyou-03,
+.gaiyou-05{
+  height: 1200px;
+}
+.gaiyou-04{
+  height: 700px;
+}
+.gaiyou-06{
+  height: 900px;
+}
+.manual{
+  background-color: #d3de8f;
+  width: 550px;
+  height: 120px;
+  margin: 0 auto;
+  color: #000;
+  text-shadow:1px 1px 0 #FFF, -1px -1px 0 #FFF,
+              -1px 1px 0 #FFF, 1px -1px 0 #FFF,
+              0px 1px 0 #FFF,  0-1px 0 #FFF,
+              -1px 0 0 #FFF, 1px 0 0 #FFF;
+  box-shadow: 2px 2px 10px #888;
+  border: 10px solid #fff;
+  border-radius: 10px;
+}
+.manual h2{
+  font-size: 28px;
+  color: #1D9654;
+}
+.manual p{
+  font-size: 14px;
+}
+.gaiyou-07 p{
+  color: #1D9654;
+}
+.traceability img,
+.homepage img,
+.tunagaru img{
+  margin: 80px 20px;
+}
+.midashi img{
+  height: 90px;
+}
+.midashi-02 img{
+  height: 80px;
+}
+.check{
+  padding: 80px 0 0;
+}
+.check img{
+  width: 130px;
+  margin: 0 20px;
+}
+.check-2{
+  font-size: 20px;
+  font-weight: 200;
+}
+.check br{
+  display: none;
+}
+.seisan{
+  width: 250px;
+  height: 100px;
+  background-color: #E68024;
+  margin: 60px auto 0;
+  outline: thin solid #fff;
+  outline-offset: -10px;
+  border-radius: 10px;
+  box-shadow: 1px 1px 2px 2px #808080;
+  box-sizing: border-box;
+}
+.seisan h1{
+  color: #fff;
+  font-size: 34px;
+  font-weight: 100;
+  padding-top: 25px;
+}
+.circle{
+  width: 450px;
+  height: 450px;
+  border-radius: 50%;
+  background: #fff;
+  border: 1px solid #707070;
+  opacity: 0.9;
+  text-align: center;
+  line-height: 0.5;
+  margin-top: 80px;
+}
+
+.circle img{
+    width: 100px;
+}
+.circle p,
+.mazuha-p{
+  margin: 35px;
+  font-size: 2rem;
+  text-align: left;
+  line-height: 1.2;
+}
+.circle h2{
+    font-size: 4rem;
+    margin-top: 50px;
+}
+.circle span{
+    font-size: 2rem;
+}
+.wrap-2{
+  display: flex;
+  justify-content: space-between;
+}
+
+#try-gap{
+  width: 100%;
+  height: 1500px;
+  background-image: url("../img/torikumu_kabe.png");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  left: 0;
+  padding: 100px 0;
+}
+.wrap{
+  width: 1080px;
+  text-align: center;
+  margin: 0 auto;
+}
+.mazuha{
+  position: relative;
+  line-height: 0.8;
+  top: 50px;
+}
+.mazuha p{
+  margin: -150px 180px 0 300px;
+  position: absolute;
+}
+.mazuha img{
+  width: 700px;
+}
+#mazuha-p{
+  font-size: 1.9rem;
+  text-align: left;
+  line-height: 1.2;
+}
+.suportdiv {
+  width: 1080px;
+  height: 200px;
+  margin: 30px auto;
+  background-color:rgba(254,235,190,0.8);
+  position: relative;
+  top: 100px;
+  border-radius: 30px;
+}
+
+.suportdiv img {
+  width: 100px;
+  margin: 50px 10px
+}
+.right {
+  margin: 0;
+  width: 850px;
+  float: right;
+  top: 40px;
+  position: relative;
+  text-align: left;
+}
+.right p{
+  font-size: 18px;
+  line-height: 1.3;
+}
+.right img{
+  width: 310px;
+  position: absolute;
+  top: -150px;
+  left: 580px;
+}
+.ninsyo{
+  width: 170px;
+  height: 30px;
+  background-color: #B2306A;
+  text-align: center;
+  border-radius : 5px;
+  font-size: 1.5rem;
+  float: right;
+  margin-top: -20px;
+  margin-right: 7rem;
+}
+.ninsyo p{
+  color: #fff;
+}
+.sp-br{
+  display: none;
+}
+
+.circle_number {
+  width: 90px;
+  height: 90px;
+  border: 10px double #6A4504;
+  background: #fff;
+  color: #6A4504;
+  border-radius: 50%;
+  text-align: center;
+  box-sizing: border-box;
+  font-size: 48px;
+  margin: 0 auto;
+  z-index: 99;
+  position: relative;
+}
+.square{
+  top: -45px;
+  border: 3px solid#6A4504;
+  background-color:rgba(255,255,255,0.7);
+  border-radius: 10%;
+  position: relative;
+  z-index: 9;
+  padding: 50px 10px 12px 10px;
+  width: 250px;
+  text-align: justify;
+  line-height: 1.8;
+}
+.square p{
+  font-size: 18px;
+}
+.square span{
+  font-size: 15px;
+  color: #B2306A;
+}
+.square img{
+  width: 200px;
+}
+.bubble{
+  position: absolute;
+  top: 170px;
+  left: 165px;
+  width: 90px !important;
+}
+.kanri{
+  margin-top: 100px;
+}
+
+.logo02 {
+  height: 80px;
+  background: #6A4504;
+  display: flex;
+}
+
+.logo02 p {
+  font-size: 18px;
+  font-family: "Kiwi Maru", serif;
+  color: #ffffff;
+  line-height: 30px;
+  margin: 0.5em auto;
+  text-align: left;
+  text-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
+}
+
+.logo02 img {
+  width: 55px;
+  height: 55px;
+  margin: 15px 10px;
+}
+
+.mainContents02 h1 {
+  font-size: 50px;
+  text-shadow: 1px 2px 8px #000000;
+  color: #ffffff;
+  font-family: "Kiwi Maru", serif;
+  margin: 0 3em;
+  padding: 5em 0;
+  text-align: left;
+}
+
+#contact .main {
+  background-image: url("../img/contacttop.jpg");
+}
+
+#producer .main {
+  background-image: url("../img/producertop.jpg");
+}
+
+#support .main {
+  background-image: url("../img/supporttop.jpg");
+}
+
+#function .main {
+  background-image: url("../img/functiontop.jpg");
+}
+
+.main {
+  height: 450px;
+  outline: 1px solid #fff;
+  outline-offset: -10px;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  margin: 0 auto;
+}
+
+.mainContents02 header {
+  max-width: 100%;
+  height: 80px;
+}
+
+#contact_contents,
+#producer_contents,
+#support_contents{
+  width: 1080px;
+  height: 400px;
+  background-color: #FEEBBE;
+  margin: 70px auto;
+  padding: 5px;
+  text-align: center;
+}
+
+#function_contents h3{
+  color: #fff;
+  padding: 0.5em;
+  display: inline-block;
+  background: #F1C67B;
+  vertical-align: middle;
+  border-radius: 25px 0px 0px 25px;
+  font-size: 22px;
+}
+
+h3:before {
+  content: '●';
+  color: white;
+  margin-right: 8px;
+}
+.gaiyou-h{
+  text-align: left;
+  width: 1080px;
+  padding: 5rem 35rem 0 ;
+}
+.gaiyou-h h2{
+  font-size: 30px;
+}
+
+
+/***追従するトップへ戻るボタン***/
+html{
+  scroll-behavior: smooth;
+}
+#page_top{
+  width: 60px;
+  height: 60px;
+  position: fixed;
+  right: 50px;
+  bottom: 10px;;
+  background: #FEEBBE;
+  opacity: 0.8;
+  border-radius: 50%;
+}
+#page_top a{
+  position: relative;
+  display: block;
+  width: 67px;
+  height: 53px;
+  text-decoration: none;
+}
+#page_top a::before{
+  font-family: 'Font Awesome 5 Free';
+  font-weight: 900;
+  content: '\f106';
+  font-size: 40px;
+  color: #fff;
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  top: -28px;
+  bottom: 0;
+  right: 0;
+  left: -6px;
+  margin: auto;
+}
+/***トップへ戻るボタンここまで***/
+
+#support_contents {
+  height: 500px;
+}
+
+#contact_contents a {
+  color: #fff;
+  font-size: 50px;
+}
+
+#producer_contents p {
+  font-size: 25px;
+  width: 880px;
+  margin: 30px auto 60px;
+  color: #6A4504;
+}
+
+#producer_contents img {
+  width: 500px;
+}
+
+#support_contents th {
+  color: #fff;
+  width: 120px;
+  background-color: #E68024;
+  border-radius: 10%;
+  font-size: 22px;
+  font-family: "Kiwi Maru", serif;
+}
+
+#support_contents td {
+  width: 500px;
+  font-size: 18px;
+  color: #707070;
+  text-align: left;
+  margin: 0 20px;
+}
+
+#support_contents table {
+  margin: 0 auto;
+  border-collapse: separate;
+  border-spacing: 50px;
+}
+
+.p_01 {
+  margin: 60px auto;
+  background-color: #E68024;
+  outline: 1px solid #fff;
+  outline-offset: -3px;
+  width: 700px;
+  height: 100px;
+  line-height: 100px;
+}
+
+.p_01:hover {
+  opacity: 50%;
+}
+
+.p_02 {
+  margin: 60px auto;
+  background-color: #A8BE20;
+  outline: 1px solid #fff;
+  outline-offset: -3px;
+  width: 700px;
+  height: 100px;
+  line-height: 100px;
+}
+
+.p_02:hover {
+  opacity: 50%;
+}
+
+.desktop-hidden {
+  display: none;
+}
+
+.mainContents,
+.mainContents02{
+  animation-name: fadeInAnime;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  opacity: 0;
+}
+.row{
+    margin-right: 0 !important;
+    margin-left: 0 !important;
+}
+
+
+
+.fadeUp{
+animation-name:fadeUpAnime;
+animation-duration:0.5s;
+animation-fill-mode:forwards;
+opacity:0;
+}
+
+@keyframes fadeUpAnime{
+  from {
+    opacity: 0;
+  transform: translateY(100px);
+  }
+
+  to {
+    opacity: 1;
+  transform: translateY(0);
+  }
+}
+/* スクロールをしたら出現する要素にはじめに透過0を指定　*/
+.fadeUpTrigger{
+    opacity: 0;
+}
+
+
+@keyframes fadeInAnime {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@media(min-width:1200px){
+.delete{
+    display: none;
+}
+}
+
+@keyframes gnaviAnime{
+0% {
+opacity: 0;
+}
+100% {
+opacity: 1;
+}
+}
+
+@media screen and (max-width:1200px) {
+
+nav{
+    height: 0px;
+    background-color: transparent;
+}
+.gnavi,
+.gnavi-02{
+    display: contents;
+    height: 100px;
+}
+.gnavi li a,
+.gnavi-02 li a{
+    top:100px;
+    color: #6A4504 !important;
+}
+.gnavi-02 li a::after {
+    left: 35%;
+    width: 30%;
+}
+
+footer .gnavi{
+    display: flex;
+    height: 100px;
+}
+footer .gnavi li a{
+    top:10px;
+}
+footer{
+  z-index: 9;    
+}
+/*   openbtn   */
+.openbtn{
+	position: fixed;
+	background:#6A4504;
+	cursor: pointer;
+    width: 50px;
+    height:50px;
+	border-radius: 5px;
+    opacity: 0.8;
+    margin-left: auto;
+	z-index: 999999;
+    top: 10px;
+    right:10px;
+}
+.openbtn span{
+    display: inline-block;
+    transition: all .4s;
+    position: absolute;
+    left: 14px;
+    height: 3px;
+    border-radius: 2px;
+	background: #fff;
+  	width: 45%;
+  }
+.openbtn span:nth-of-type(1) {
+	top:15px;	
+}
+.openbtn span:nth-of-type(2) {
+	top:23px;
+}
+.openbtn span:nth-of-type(3) {
+	top:31px;
+}
+.openbtn.active span:nth-of-type(1) {
+    top: 18px;
+    left: 18px;
+    transform: translateY(6px) rotate(-45deg);
+    width: 30%;
+}
+.openbtn.active span:nth-of-type(2) {
+	opacity: 0;
+}
+.openbtn.active span:nth-of-type(3){
+    top: 30px;
+    left: 18px;
+    transform: translateY(-6px) rotate(45deg);
+    width: 30%;
+}
+/*   ここまで　openbtn   */
+    
+    
+/*   オープンナビ   */
+#g-nav.panelactive{
+    position:fixed;
+    z-index: 99999;
+	top: 0;
+	width:100%;
+    height: 100vh;
+}
+
+.circle-bg{
+    position: fixed;
+	z-index:999;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background: #FEEBBE;
+	transform: scale(0);
+	right:-50px;
+    top:-50px;
+    transition: all .6s;
+}
+
+.circle-bg.circleactive{
+	transform: scale(50);
+}
+
+#g-nav-list{
+    display: none;
+    position: fixed;
+    z-index: 999; 
+    width: 100%;
+    height: 100vh;
+    overflow: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+#g-nav.panelactive #g-nav-list{
+     display: block;
+}
+
+#g-nav ul {
+	opacity: 0;
+    position: absolute;
+    z-index: 999;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+}
+#g-nav.panelactive ul,
+nav{
+    opacity:1;
+}
+
+#g-nav.panelactive ul li,
+nav{
+animation-name:gnaviAnime;
+animation-duration:1s;
+animation-delay:.2s;
+animation-fill-mode:forwards;
+opacity:0;
+}
+#g-nav li{
+	text-align: center; 
+	list-style: none;
+}
+
+#g-nav li a{
+	text-decoration: none;
+	padding:10px;
+	display: block;
+	text-transform: uppercase;
+	letter-spacing: 0.1em;
+	font-weight: bold;
+}
+/*   ここまでオープンナビ   */
+
+h4{
+  width: 700px;
+}
+.topContents h1 {
+  line-height: 2.4;
+}
+.link{
+  width: 720px;
+  margin: 230px auto 0;
+}
+.link img{
+  height: 200px;
+}
+  .logo p {
+    font-size: 25px;
+    line-height: 25px;
+  }
+
+  .logo {
+    height: 50px;
+  }
+
+  .logo img {
+    height: 70px;
+  }
+/*・・・ボタン用・・・*/
+
+html {
+  font-size: 42%;
+}
+
+.btn,
+a.btn,
+button.btn {
+  top:-120px;
+}
+/*・・・ボタン用ここまで・・・*/
+    
+#index .topContents {
+  background-image: url("../img/top_m.png");
+  height: 1080px;
+}
+.circle{
+  width: 350px;
+  height: 350px;
+  line-height: 1.2;
+  margin-top: 60px;
+}
+.circle p,
+.mazuha p{
+  margin: 35px;
+  font-size: 2.2rem;
+}
+.circle h2{
+    font-size: 4rem;
+    margin-top: 20px;
+}
+.circle span{
+    font-size: 2rem;
+}
+.wrap-2{
+  display: flex;
+  justify-content: space-between;    
+}
+.wrap{
+  width: 750px;
+}
+.mazuha{
+  top: 50px;
+}
+.mazuha p{
+  margin: -150px 125px 0;
+  font-size: 2.5rem;
+}
+#mazuha-p{
+  font-size: 2.7rem;
+  text-align: left;
+  line-height: 1.2;
+  width: 530px;
+}
+.suportdiv{
+  width: 680px;
+  height: 250px;
+  margin: 80px auto;
+}
+.suportdiv img {
+  margin: 80px 10px
+}
+.right {
+  width: 480px;
+  margin: 0 30px 0 0;
+}
+.right p{
+  font-size: 2.5rem;
+  line-height: 1.3;
+}
+.right h2{
+  font-size: 2.7rem;
+  font-weight: 500;
+}
+.right img{
+  top: -32rem;
+  left: 34rem;
+}
+.ninsyo{
+  font-size: 1rem;
+  float: right;
+  margin-top: 0;
+  margin-right: 0;
+}
+.practice{
+  height: 1800px;
+  background-image: url("../img/sdgs_m.png");
+}
+.square{
+  width: 230px;
+}
+.square p{
+  font-size: 16px;
+}
+.square span{
+  font-size: 14px;
+}
+.bubble{
+  left: 150px;
+}
+
+.screen img{
+    width: 700px;
+}
+.screen-02 img{
+    width: 600px;
+}
+.screen-03 img{
+    width: 650px;
+}
+.feature{
+  height: 2500px;
+}
+.medium{
+  height: 1900px;
+  padding: 100px 0;
+}
+.traceability{
+  height: 1800px;
+  background-image: url("../img/traceability-m.png");
+}
+.homepage{
+  height: 3600px;
+}
+.tunagaru{
+  height: 1500px;
+}
+
+.security {
+    margin: 100px auto 0 0;
+    width: 100%;
+  }
+    
+/*   02ここから   */
+  .logo02 p {
+    font-size: 1.5rem;
+  }
+
+  .logo02 {
+    height: 80px;
+    background: #6A4504;
+    width: 100%;
+    text-align: center;
+  }
+
+  .logo02 p {
+    font-size: 2.5vw;
+    line-height: 30px;
+    text-align: center;
+    margin: 0.5em;
+    text-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
+    float: left;
+  }
+
+  .logo02 img {
+    width: 66px;
+    height: 66px;
+    margin: 10px 8px;
+    float: left;
+  }
+
+  /*   02ここまで   */
+.mainContents02 h1 {
+  margin: 0 1em;
+}
+#function_contents img{
+  width: 700px;
+}
+.gaiyou-h{
+  padding: 5rem 5rem 0 ;
+  width: 100%;
+}
+.gaiyou-h h2{
+  font-size: 25px;
+}
+.gaiyou-03,
+.gaiyou-05{
+  height: 950px;
+}
+.gaiyou-04{
+  height: 600px;
+}
+.gaiyou-06,
+.gaiyou-08{
+  height: 750px;
+}
+.manual{
+  width: 450px;
+  height: 90px;
+}
+.manual h2{
+  font-size: 20px;
+  color: #1D9654;
+  margin-top: -15px;
+}
+.manual p{
+  font-size: 12px;
+}
+.manual-01{
+  font-size: 20px;
+}
+#page_top{
+  right: 10px;
+}
+
+  #contact_contents,
+  #producer_contents,
+  #support_contents {
+    width: 100%;
+    height: 100%;
+    margin: 70px auto;
+    padding: 25px 0;
+  }
+
+  #contact_contents p,
+  #support_contents p {
+    font-size: 1em;
+  }
+
+  #producer_contents p {
+    width: 700px;
+    font-size: 2.8em;
+  }
+#index footer {
+  width: 100%;
+}
+@media screen and (max-width:768px) {
+
+.topContents h1 {
+  font-size: 36px;
+  line-height: 2.3;
+  margin-top: 2em;
+}
+.link{
+  width: 300px;
+  margin: 150px auto 0;
+}
+.link img{
+  height: 110px;
+}
+  .logo p {
+    font-size: 18px;
+    line-height: 25px;
+  }
+
+  .logo {
+    height: 50px;
+  }
+
+  .logo img {
+    height: 60px;
+    margin-top: 10px;
+  }
+/*・・・ボタン用・・・*/
+
+html {
+  font-size: 18%;
+}
+
+.btn,
+a.btn,
+button.btn {
+  top:-70px;
+}
+a.btn-border-shadow:before {
+  top: -4px;
+  left: -4px;
+}
+
+a.btn-border-shadow:before {
+  top: -4px;
+  left: -4px;
+  border: 1px solid #000;
+}
+/*・・・ボタン用ここまで・・・*/
+h4{
+  width: 310px;
+}
+.screen h4{
+  font-weight: 100;
+}
+    
+#index .topContents {
+  background-image: url("../img/top_s.png");
+  width: 100%;
+  height: 650px;
+}
+.circle{
+  width: 280px;
+  height: 280px;
+  margin: 50px auto;
+}
+.circle p{
+  margin: 35px;
+  font-size: 1.5rem;
+}
+.circle h2{
+    font-size: 8rem;
+    margin-top: 20px;
+}
+.circle span{
+    font-size: 2rem;
+}
+.circle img{
+    width: 70px;
+}
+.wrap-2{
+  display: flow-root;
+  justify-content: space-between;
+}
+.wrap{
+  width: 300px;
+}
+.wrap p{
+  font-size: 12px;
+}
+.midashi img{
+  height: 50px;
+}
+.midashi-02 img{
+  height: 70px;
+}
+.check{
+  padding: 50px 0 0;
+  font-size: 15px;
+}
+.check-2{
+  font-size: 10px;
+}
+.check img{
+  width: 40px;
+  margin: auto 5px;
+}
+.check br{
+  display: block;
+}
+.seisan img{
+  width: 150px;
+  margin: 70px 0 0;
+}
+.medium-2 img{
+  width: 280px;
+}
+.mazuha{
+  top: 50px;
+}
+.mazuha p{
+  margin: -73px 0 0 40px;
+}
+.mazuha img{
+  width: 300px;
+}
+#mazuha-p{
+  font-size: 0.8rem;
+  text-align: left;
+  line-height: 1;
+  width: 235px;
+}
+#mazuha-p br{
+  display: none;
+}
+#try-gap{
+  height: 1650px;
+  background-image: url("../img/torikumu_kabe.png");
+  background-size: auto;
+background-position: bottom;
+  padding: 0;
+  margin: 100px 0 0 0;
+}
+.suportdiv{
+  width: 310px;
+  height: 550px;
+  margin: 0 auto;
+}
+.suportdiv img {
+  margin: 30px 10px;
+}
+.right {
+  width: 300px;
+  margin: 30px auto;
+  float: none;
+}
+.right p{
+  font-size: 14px;
+  line-height: 2.2;
+  letter-spacing: -0.05em;
+}
+.right h2{
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.5;
+  text-align: center;
+}
+.right img{
+  top: -35rem;
+  left: 47rem;
+  width: 150px;
+}
+.ninsyo{
+  float: none;
+  margin: 25px auto 0;
+}
+.sp-br{
+  display : block;
+}
+.practice{
+  height: 3600px;
+  background-image: url("../img/sdgs_s.png");
+  background-color:rgba(255,255,255,0.9);
+  background-blend-mode:lighten;
+}
+.square{
+  width: 230px;
+}
+.square p{
+  font-size: 19px;
+}
+.square span{
+  font-size: 16px;
+}
+.bubble{
+  left: 220px;
+}
+.square{
+  z-index: 9;
+  padding: 50px 30px 20px;
+  width: 300px;
+}
+.screen img{
+    width: 320px;
+    margin: 30px 0;
+}
+.screen-02 img{
+  width: 310px;
+  text-align: center;
+  display: block;
+  margin: 40px auto;
+}
+.screen-03 img{
+    width: 300px;
+    margin: 30px 0;
+}
+.feature{
+  height: 1300px;
+  background-image: url("../img/feature-m.png");
+}
+.medium{
+  height: 950px;
+  padding: 50px 0;
+}
+.traceability{
+  height: 980px;
+  background-image: url("../img/traceability-m.png");
+}
+.homepage{
+  height: 1600px;
+}
+.tunagaru{
+  height: 650px;
+}
+footer .gnavi{
+    display: block;
+    height: 80px;
+    text-align: center;
+}
+footer .gnavi li a{
+    top:10px;
+}
+footer{
+  z-index: 9;    
+}
+footer .gnavi li, 
+footer .gnavi-02 li {
+  height: 30px;
+  margin-bottom: 0;
+}
+    
+footer .gnavi li a, 
+footer .gnavi-02 li a{
+  font-size: 14px;
+}
+.security {
+    margin: 200px auto 0 0;
+    width: 100%;
+}
+.security a{
+    font-size: 10px;
+}    
+.copySns a{
+    font-size: 8px;
+}
+
+.logo02 p {
+  font-size: 14px;
+}
+.mainContents02 h1 {
+    margin: 0 20px;
+    padding: 9em 0 0 0;
+    font-size: 40px;
+}
+.gaiyou-h{
+  width: 300px;
+  padding: 30px 0 0;
+  margin: 0 auto;
+}
+.gaiyou-h h2{
+  font-size: 22px;
+}
+.gaiyou-03,
+.gaiyou-05{
+  height: 410px;
+}
+.gaiyou-04{
+  height: 280px;
+}
+.gaiyou-06,
+.gaiyou-08{
+  height: 330px;
+}
+#function_contents img{
+  width: 300px;
+  margin: 30px 0;
+}
+#function_contents .gaiyou-h h3{
+  font-size: 14px;
+}
+.manual{
+  width: 300px;
+  height: 80px;
+}
+.manual h2{
+  font-size: 14px;
+  color: #1D9654;
+  margin-top: -15px;
+}
+.manual p{
+  font-size: 10px;
+}
+.manual-01{
+  font-size: 12px;
+  width: 300px;
+  margin: 0 auto;
+}
+  #contact_contents,
+  #producer_contents {
+    width: 100%;
+    height: 100%;
+    margin: 70px auto 0;
+    padding: 15px 0;
+  }
+
+  #contact_contents p{
+    margin: 30px auto;
+    width: 83%;
+  }
+  #producer_contents p {
+    text-align: left;
+    margin: 20px auto;
+    width: 305px;
+  }
+  #contact_contents a {
+    font-size: 25px;
+  }
+  #producer_contents img {
+    width: 300px;
+  }
+  #support_contents th {
+    width: 100%;
+    background-color: #E68024;
+    border-radius: 10%;
+    font-size: 10px;
+    font-family: "Kiwi Maru", serif;
+  }
+  #support_contents td {
+    width: 100%;
+    font-size: 10px;
+    color: #707070;
+    text-align: left;
+    margin: 0;
+  }
+  #support_contents table {
+    margin: 0 auto;
+    border-collapse: separate;
+    border-spacing: 10px;
+  }
+  #support_contents th {
+    width: 15%;
+  }
+  #support_contents {
+    margin: 20px auto;
+  }
+
+}
+}
