@@ -43,26 +43,37 @@ ul {
   padding: 0;
 }
 
-header {
+header,
+.toplogo{
   max-width: 1300px;
-  height: 100px;
+  height: 85px;
   margin: 0 auto;
 }
-
+header{
+    position: fixed;
+    z-index: 9999999;
+    width: 100%;
+}
 .logo {
   float: left;
+  margin-top: 10px
 }
 
 .link{
-  width: 1190px;
-  margin: 120px auto 0;
-  display: flex;
-  justify-content: space-between;
+  width: 450px;
+  right: 1.4vw;
+  top: 0;
+  position: absolute;
+  height: 500px;
 }
 .otameshi img,
 .torikumou img{
-  height: 260px;
+  height: 230px;
   margin: 0;
+  box-shadow: 5px 5px 5px #000;
+}
+.torikumou{
+    margin: 110px 0 0;
 }
 /*・・・ボタン用・・・*/
 *,
@@ -81,7 +92,7 @@ html {
 .btn,
 a.btn,
 button.btn {
-  font-size: 2rem;
+  font-size: 1.5rem;
   font-weight: 700;
   line-height: 2.2;
   position: relative;
@@ -99,7 +110,7 @@ button.btn {
   letter-spacing: 0.1em;
   color: #212529;
   border-radius: 0.5rem;
-  top:-160px;
+  top:-140px;
 }
 
 a.btn-border-shadow {
@@ -164,10 +175,21 @@ nav{
     position: relative;
     justify-content: center;
 }
+.gnavi-top{
+    display: flex;
+    list-style: none;
+    height: 60px;
+    position: fixed;
+    justify-content: center;
+    width: 100%;
+    background-color: #FEEBBE;
+    z-index: 999999999;
+}
 
-.gnavi li a{
+.gnavi li a,
+.gnavi-top li a{
     display: block;
-    padding:15px 17px;
+    padding:25px 17px 0;
     text-decoration: none;
     color: #6A4504;
     font-size: 16px;
@@ -184,21 +206,48 @@ nav{
 	position: relative;
 }
 .gnavi li,
-.gnavi-02 li{
+.gnavi-02 li,
+.gnavi-top li{
     margin-bottom:20px;
 }
 .gnavi li.current a,
 .gnavi li a:hover,
 .gnavi-02 li.current a,
-.gnavi-02 li a:hover{
+.gnavi-02 li a:hover,
+.gnavi-top li.current a,
+.gnavi-top li a:hover{
 	color:#E68024;
 }
 
-.gnavi li a::after,
+.gnavi li a::after{
+    content: '';
+    position: absolute;
+    bottom: -13px;
+    left: 10%;
+    width: 80%;
+    height: 2px;
+    background:#E68024;
+    transition: all .3s;
+    transform: scale(0, 1);/*X方向0、Y方向1*/
+    transform-origin: center top;/*上部中央基点*/
+}
 .gnavi-02 li a::after{
     content: '';
     position: absolute;
-    bottom: 9px;
+    bottom: 13px;
+    left: 10%;
+    width: 80%;
+    height: 2px;
+    background:#E68024;
+    transition: all .3s;
+    transform: scale(0, 1);/*X方向0、Y方向1*/
+    transform-origin: center top;/*上部中央基点*/
+}
+
+.gnavi-top li a::after{
+    content: '';
+    position: absolute;
+    bottom: -18px;
     left: 10%;
     width: 80%;
     height: 2px;
@@ -211,7 +260,9 @@ nav{
 .gnavi li.current a::after,
 .gnavi li a:hover::after,
 .gnavi-02 li.current a::after,
-.gnavi-02 li a:hover::after {
+.gnavi-02 li a:hover::after,
+.gnavi-top li.current a::after,
+.gnavi-top li a:hover::after{
     transform: scale(1, 1);
 }
 
@@ -289,6 +340,69 @@ h2 {
 .logo img {
   float: right;
 }
+.conversion{
+    height: 70px;
+    z-index: 9999999;
+    width: 400px;
+    justify-content: space-around;
+    display: flex;
+    align-items: center;
+    line-height: normal;
+    margin-bottom: 80px;
+    margin-top: 65px;
+}
+.conversion a{
+    font-size: 2em;
+    background-color: #E68024;
+    box-shadow: 5px 5px 5px #000;
+}
+/*conversionボタン*/
+.btn4{
+    /*アニメーションの起点とするためrelativeを指定*/
+    position: relative;
+	overflow: hidden;
+    /*ボタンの形状*/
+	text-decoration: none;
+	display: inline-block;
+   	border: 2px solid #fff;/* ボーダーの色と太さ */
+    padding: 10px 30px;
+    text-align: center;
+    outline: none;
+    /*アニメーションの指定*/   
+    transition: ease .2s;
+}
+
+/*ボタン内spanの形状*/
+.btn4 span {
+	position: relative;
+	z-index: 3;/*z-indexの数値をあげて文字を背景よりも手前に表示*/
+	color:#fff;
+}
+
+.btn4:hover span{
+	color:#fff;
+}
+
+/*== 背景が流れる（上から下） */
+.bgtop:before {
+ 	content: '';
+    /*絶対配置で位置を指定*/
+ 	position: absolute;
+ 	top:0;
+ 	left: 0;
+ 	z-index: 2;
+    /*色や形状*/
+ 	background:  #abc021;/*背景色*/
+ 	width: 100%;
+	height: 0;
+    /*アニメーション*/
+ 	transition:.3s cubic-bezier(0.8, 0, 0.2, 1) 0s;
+}
+.bgtop:hover:before{
+	 height: 100%;	
+ 	 background-color: #abc021;
+}
+/*conversionボタン終わり*/
 
 #index footer {
   width: 960px;
@@ -317,6 +431,7 @@ h4{
   line-height: 0;
   margin: 0 auto;
   text-align: center;
+  position: relative;
 }
 
 .topContents h1 {
@@ -738,7 +853,7 @@ h4{
 }
 
 .main {
-  height: 450px;
+  height: 400px;
   outline: 1px solid #fff;
   outline-offset: -10px;
   width: 100%;
@@ -746,6 +861,8 @@ h4{
   background-position: center center;
   background-size: cover;
   margin: 0 auto;
+  top: 80px;
+  position: relative;
 }
 
 .mainContents02 header {
@@ -759,7 +876,7 @@ h4{
   width: 1080px;
   height: 400px;
   background-color: #FEEBBE;
-  margin: 70px auto;
+  margin: 150px auto;
   padding: 5px;
   text-align: center;
 }
@@ -782,7 +899,7 @@ h3:before {
 .gaiyou-h{
   text-align: left;
   width: 1080px;
-  padding: 5rem 35rem 0 ;
+  padding: 15rem 35rem 0 ;
 }
 .gaiyou-h h2{
   font-size: 30px;
@@ -951,11 +1068,16 @@ opacity:0;
 }
 
 @media(min-width:1200px){
-.delete{
+.delete,
+.dk-del{
     display: none;
 }
 }
-
+@media(max-width:1200px){
+.sptb-del{
+    display: none;
+}
+}
 @keyframes gnaviAnime{
 0% {
 opacity: 0;
@@ -966,26 +1088,31 @@ opacity: 1;
 }
 
 @media screen and (max-width:1200px) {
-
+header {
+  margin: 0px auto;
+}
 nav{
     height: 0px;
     background-color: transparent;
 }
 .gnavi,
-.gnavi-02{
+.gnavi-02,
+.gnavi-top{
     display: contents;
     height: 100px;
 }
+
 .gnavi li a,
-.gnavi-02 li a{
+.gnavi-02 li a,
+.gnavi-top li a{
     top:100px;
     color: #6A4504 !important;
 }
 .gnavi-02 li a::after {
     left: 35%;
     width: 30%;
+    bottom: -15px;
 }
-
 footer .gnavi{
     display: flex;
     height: 100px;
@@ -1115,7 +1242,9 @@ opacity:0;
 
 #g-nav li a{
 	text-decoration: none;
-	padding:10px;
+	padding: 30px;
+    width: 60%;
+    margin: 0 auto;
 	display: block;
 	text-transform: uppercase;
 	letter-spacing: 0.1em;
@@ -1129,18 +1258,23 @@ h4{
 .topContents h1 {
   line-height: 2.4;
 }
-.link{
-  width: 720px;
-  margin: 230px auto 0;
-}
-.link img{
-  height: 200px;
+.torikumou{
+    margin: 30px 0 0;
 }
   .logo p {
     font-size: 25px;
     line-height: 25px;
   }
-
+.conversion{
+    height: 70px;
+    z-index: 9999999;
+    width: 450px;
+    margin-bottom: 70px;
+    margin-top: 0;
+}
+.conversion a{
+    font-size: 3em;
+}
   .logo {
     height: 50px;
   }
@@ -1158,6 +1292,7 @@ html {
 a.btn,
 button.btn {
   top:-120px;
+  font-size: 2rem;
 }
 /*・・・ボタン用ここまで・・・*/
     
@@ -1359,7 +1494,7 @@ button.btn {
   #support_contents {
     width: 100%;
     height: 100%;
-    margin: 70px auto;
+    margin: 170px auto;
     padding: 25px 0;
   }
 
@@ -1375,6 +1510,19 @@ button.btn {
 #index footer {
   width: 100%;
 }
+.link2{
+  position: static;
+  display: flex !important;
+  width: 730px;
+  justify-content: space-between;
+  align-items: baseline;
+  margin: 0 auto;
+  margin-top: 230px;
+}
+.link2 img{
+  height: 200px;
+}
+}
 @media screen and (max-width:768px) {
 
 .topContents h1 {
@@ -1383,11 +1531,40 @@ button.btn {
   margin-top: 2em;
 }
 .link{
-  width: 300px;
-  margin: 150px auto 0;
+  right: 0.1vw;
+  top: 80px;
 }
 .link img{
   height: 110px;
+}
+.link2{
+  position: static;
+  display: flex !important;
+  width: 300px;
+  justify-content: space-between;
+  align-items: baseline;
+  margin: 0 auto;
+  margin-top: 130px;
+}
+.link2 img{
+  height: 110px;
+}
+.torikumou{
+    margin: 30px 0 0;
+}
+  .logo p {
+    font-size: 25px;
+    line-height: 25px;
+  }
+.conversion{
+    height: 70px;
+    z-index: 9999999;
+    width: 100%;
+    margin-bottom: 70px;
+    justify-content: flex-end;
+}
+.conversion a{
+    font-size: 4em;
 }
   .logo p {
     font-size: 18px;
@@ -1412,6 +1589,8 @@ html {
 a.btn,
 button.btn {
   top:-70px;
+  font-size: 3rem;
+  line-height: 2.5;
 }
 a.btn-border-shadow:before {
   top: -4px;
@@ -1630,8 +1809,13 @@ footer .gnavi li a,
 footer .gnavi-02 li a{
   font-size: 14px;
 }
+    
+.gnavi li a{
+    padding:0 17px 0;
+    margin: 8px;
+}
 .security {
-    margin: 200px auto 0 0;
+    margin: 260px auto 0 0;
     width: 100%;
 }
 .security a{
@@ -1646,7 +1830,7 @@ footer .gnavi-02 li a{
 }
 .mainContents02 h1 {
     margin: 0 20px;
-    padding: 9em 0 0 0;
+    padding: 7em 0 0 0;
     font-size: 40px;
 }
 .gaiyou-h{
@@ -1696,7 +1880,7 @@ footer .gnavi-02 li a{
   #producer_contents {
     width: 100%;
     height: 100%;
-    margin: 70px auto 0;
+    margin: 170px auto 0;
     padding: 15px 0;
   }
 
@@ -1741,5 +1925,4 @@ footer .gnavi-02 li a{
     margin: 20px auto;
   }
 
-}
 }
